@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人網站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="navbar">
+        <div class="logo">MyPortfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#experience">學經歷</a></li>
+                <li><a href="#skills">相關技能</a></li>
+                <li><a href="#portfolio">作品集</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Hello, 我是Alina</h1>
+                <p>熱愛開發與創造，致力於打造優質的網頁體驗。</p>
+                <a href="#portfolio" class="btn">查看我的作品</a>
+            </div>
+        </section>
+
+        <section id="experience" class="container">
+            <h2>學經歷</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>前端工程師 @ 某某科技公司</h3>
+                    <span class="date">2023 - 至今</span>
+                    <p>負責網站前端架構設計與開發，優化使用者體驗。</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>資訊工程學系 @ 某某大學</h3>
+                    <span class="date">2019 - 2023</span>
+                    <p>參與多項產學合作專案，並擔任畢業專題組長。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container bg-white">
+            <h2>相關技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">HTML / CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">React / Vue</div>
+                <div class="skill-card">Firebase</div>
+                <div class="skill-card">UI / UX 概念</div>
+                <div class="skill-card">Git 版本的控制</div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="container">
+            <h2>作品集</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="card-img">專案截圖 1</div>
+                    <div class="card-content">
+                        <h3>專案名稱一</h3>
+                        <p>一個擁有使用者驗證與資料庫同步功能的網路應用程式。</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-img">專案截圖 2</div>
+                    <div class="card-content">
+                        <h3>專案名稱二</h3>
+                        <p>結合了即時數據分析的個人理財追蹤工具。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 個人版權所有</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

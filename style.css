@@ -1,0 +1,225 @@
+/* 定義黃色系色彩變數 */
+:root {
+    --primary-yellow: #FFC107; /* 主黃色 */
+    --hover-yellow: #FFCA28;
+    --light-yellow: #FFF8E1; /* 淺黃色背景 */
+    --dark-text: #333333;
+    --gray-text: #666666;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-yellow);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* 導覽列 */
+header {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-yellow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-yellow);
+}
+
+/* 共通區塊設定 */
+.container {
+    padding: 5rem 5%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--primary-yellow);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+/* Hero 區塊 */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-yellow) 0%, var(--white) 100%);
+    padding-top: 60px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--primary-yellow);
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--hover-yellow);
+    transform: translateY(-2px);
+}
+
+/* 學經歷 (時間軸設計) */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 4px solid var(--primary-yellow);
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--white);
+    border: 3px solid var(--primary-yellow);
+    border-radius: 50%;
+}
+
+.timeline-item .date {
+    color: var(--primary-yellow);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* 技能區塊 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: var(--light-yellow);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid #FFE082;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-yellow);
+}
+
+/* 作品集區塊 */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px)); /* 這是你目前調整的寬度 */
+    gap: 2rem;
+    justify-content: center; /* 🌟 加上這行，讓整個網格內容水平置中 */
+}
+
+.portfolio-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    height: 200px;
+    background-color: #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-text);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* 頁尾 */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-text);
+    color: var(--white);
+}
+
+/* 響應式微調 */
+@media (max-width: 768px) {
+    #hero h1 { font-size: 2rem; }
+    nav ul { gap: 1rem; }
+}
